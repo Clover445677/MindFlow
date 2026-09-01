@@ -15,15 +15,24 @@
     </header>
 
     <main>
-        <section id="add-habit">
+        <form id="add-habit">
             <h2>Добавить привычку</h2>
             <input type="text" id="habit-name" placeholder="Название привычки">
             <select id="habit-frequency">
                 <option value="daily">Ежедневно</option>
                 <option value="weekly">Еженедельно</option>
+             <label>
+                <input type="radio" name="habit-type" value="positive" checked>
+                Позитивная
+                <input type="radio" name="habit-type" value="negative">
+                Негативная
+            </label>
             </select>
-            <button id="add-habit-btn">Добавить</button>
-        </section>
+            </select>
+            </select>
+            <button type="submit" id="add-habit-btn">Добавить</button>
+        </form>
+    </section>
 
         <section id="habit-list">
             <h2>Привычки</h2>

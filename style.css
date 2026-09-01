@@ -44,3 +44,130 @@ header {
 }
 
 /* Остальные стили будут добавлены по мере необходимости */
+.habit-item {
+    background: white;
+    border-radius: 16px;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #333; /* Убедимся, что текст виден в темной теме */
+}
+
+.dark-mode .habit-item {
+    background: #1e1e1e;
+    color: #f0f0f0; /* Белый текст для темной темы */
+}
+.check-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid #6C63FF;
+    background: transparent;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+}
+.check-btn:hover::after {
+    content: "Отметить выполнение";
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+.check-btn.done {
+    background: #4CAF50;
+    border-color: #4CAF50;
+    color: white;
+}
+.habit-progress {
+    width: 120px;
+    height: 8px;
+    background: #e8e8f0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 12px;
+}
+.habit-progress .fill {
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.5s ease;
+}
+.habit-progress .fill.good { background: #4CAF50; }
+.habit-progress .fill.medium { background: #FFC107; }
+.habit-progress .fill.bad { background: #f44336; }
+.habit-item {
+    background: white;
+    border-radius: 16px;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+.habit-item.positive {
+    border-left: 4px solid #4CAF50; /* Зеленый для позитивных */
+}
+.habit-item.negative {
+    border-left: 4px solid #F44336; /* Красный для негативных */
+}
+.dark-mode .habit-item.positive {
+    border-left: 4px solid #388E3C; /* Темный зеленый для позитивных в темной теме */
+}
+.dark-mode .habit-item.negative {
+    border-left: 4px solid #D32F2F; /* Темный красный для негативных в темной теме */
+}
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.habit-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(108, 99, 255, 0.15);
+}
+.progress-container {
+    position: relative;
+    height: 12px;
+    background: #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%;
+    margin-left: 8px;
+}
+
+.progress-bar {
+    height: 100%;
+    background: #6C63FF;
+    transition: width 0.3s ease;
+}
+
+.progress-container .percentage {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #6C63FF;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 12px;
+    transform: translateX(-50%);
+}
+
+.dark-mode .progress-container {
+    background: #333;
+}
+
+.dark-mode .progress-bar {
+    background: #7c4dff;
+}
+
+.dark-mode .progress-container .percentage {
+    background: #7c4dff;
+}
