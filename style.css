@@ -1,0 +1,46 @@
+/* Основные переменные */
+:root {
+    --primary: #6C63FF;
+    --bg: #F0F0F5;
+    --text: #1A1A1A;
+    --bg-dark: #121212;
+    --text-dark: #E0E0E0;
+}
+
+/* Тема */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    transition: all 0.3s ease;
+}
+
+.dark {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+}
+
+/* Адаптивность */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 20px;
+}
+
+/* Остальные стили будут добавлены по мере необходимости */
